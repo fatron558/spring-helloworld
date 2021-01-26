@@ -11,4 +11,14 @@ public class AppConfig {
         helloWorld.setMessage("Hello World!");
         return helloWorld;
     }
+
+    @Bean(name = "kotik")
+    @Scope("prototype")
+    public Cat getNameCat() {
+        Cat barsik = new Cat();
+        barsik.setName("Barsik");
+        return barsik;
+    }
+
+
 }
